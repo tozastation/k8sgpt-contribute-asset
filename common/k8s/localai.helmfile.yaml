@@ -1,0 +1,17 @@
+repositories:
+  - name: go-skynet
+    url: https://go-skynet.github.io/helm-charts/
+
+releases:
+  - name: local-ai
+    namespace: local-ai
+    chart: go-skynet/local-ai
+    version: 2.1.2
+    values:
+      - models:
+          list:
+            - url: https://gpt4all.io/models/ggml-gpt4all-j.bin
+            #- url: https://gpt4all.io/models/gguf/gpt4all-falcon-q4_0.gguf
+            # - url: https://gpt4all.io/models/gguf/gpt4all-falcon-q4_0.gguf
+            # - url: https://huggingface.co/datasets/inu-ai/ggml-japanese-gpt2/blob/main/ggml-model-japanese-gpt2-medium-f16.bin
+            # - url: https://gpt4all.io/models/gguf/replit-code-v1_5-3b-q4_0.gguf
